@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flex Child Growth</title>
+</head>
+<body>
+    <style> 
+
+.flex-container{
+  display: flex;
+  width: 100%;    
+  height: 100px; 
+  background-color: #f0f0f0;
+}
+
+.flex-container>div {
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-child-1{
+  background-color: #ff5733; 
+  flex-grow: 1;              
+}
+
+.flex-child-2{
+  background-color: #33b5ff;
+  flex-grow: 2;
+}       
+
+.flex-child-3 {
+  background-color: #33ff88; 
+  flex-grow: 0;              
+  width: 100px;             
+}
+
+    </style>
+   <div class="flex-container">
+    <div class="flex-child-1">Child 1</div>
+    <div class="flex-child-2">Child 2</div>
+    <div class="flex-child-3">Child 3</div>
+  </div>
+ 
+</body>
+</html>
+
+<!-- Objective: Use the flex-grow property to control how much space a flex child should take when compared to other children.
+ - Create a div container with three child div elements.
+  - Apply Flexbox to the container. 
+  - Set flex-grow: 1 for the first child, flex-grow: 2 for the second child, and flex-grow: 0 for the third child. 
+  - Observe how the second child grows twice as fast as the first one, and the third child does not grow. -->
